@@ -28,11 +28,20 @@ h2 {
 .Primeira-Parte, .Segunda-Parte {
     width: 90%;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 10px auto;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.74);
+}
+
+/* Tornando a imagem responsiva */
+.Segunda-Parte img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; /* Opcional: adiciona bordas arredondadas */
 }
 
 /* Parágrafos */
@@ -72,4 +81,63 @@ h2 {
 
 .Lista-item:nth-child(4)::before {
     color: #e0886d;
+}
+
+/* Regras responsivas */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .Primeira-Parte, .Segunda-Parte {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) { /* Tablets */
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .Primeira-Parte, .Segunda-Parte {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) { /* Smartphones */
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .Detalhes-Paragrafo, .Detalhes-paragrafo2, .Explicacao-ParagrafoFiltro, .Finalizacao-Paragrafo {
+        font-size: 0.9em;
+        text-align: justify;
+    }
+
+    .Primeira-Parte, .Segunda-Parte {
+        padding: 10px;
+        width: 95%;
+    }
 }
