@@ -24,6 +24,23 @@ h2 {
     font-size: 2em;
 }
 
+/* Contêiner responsivo para o iframe */
+.Responsive-iframe-container {
+    position: relative;
+    width: 100%; /* O contêiner ocupa toda a largura disponível */
+    padding-top: 56.25%; /* Proporção 16:9 (altura/largura) */
+    overflow: hidden;
+}
+
+.Responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove borda, se houver */
+}
+
 /* Estilo para as seções */
 .Primeira-Parte, .Segunda-Parte {
     width: 90%;
@@ -115,6 +132,9 @@ h2 {
     .Primeira-Parte, .Segunda-Parte {
         padding: 10px;
     }
+    .Segunda-Parte img {
+        max-width: 90%;
+    }
 }
 
 @media (max-width: 480px) { /* Smartphones */
@@ -139,5 +159,8 @@ h2 {
     .Primeira-Parte, .Segunda-Parte {
         padding: 10px;
         width: 95%;
+    }
+    .Segunda-Parte img {
+        max-width: 100%;
     }
 }
